@@ -1,6 +1,13 @@
-<div>
-    <app-triangle></app-triangle>
-    <app-header></app-header>
-<app-counter></app-counter>
-<app-button></app-button>
+<div style="position: relative; width:60rem;
+  height:90vh;">
+    <app-triangle style="position: absolute; top: 50px; left: 100px;" [dataFromParent]="style1"></app-triangle>
+    <app-triangle [dataFromParent]="style2"></app-triangle>
+    <app-triangle [dataFromParent]="style3"></app-triangle>
+    <app-triangle [dataFromParent]="style4"></app-triangle>
+    <app-triangle [dataFromParent]="style5"></app-triangle>
+    <app-header></app-header> 
+    <app-counter></app-counter>
+    <app-button></app-button>
 </div>
+
+
