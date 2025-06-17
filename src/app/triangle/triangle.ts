@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
@@ -10,6 +10,11 @@ import { CommonModule } from '@angular/common';
 })
 export class Triangle {
  @Input() dataFromParent: any;
+  @Output() click = new EventEmitter<void>();
+
+  onClick(): void {
+    this.click.emit();
+  }
 }
 
 

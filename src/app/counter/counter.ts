@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input  } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './counter.css'
 })
 export class Counter {
-
+ @Input() count!: number;
 }
+
