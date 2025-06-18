@@ -1,10 +1,15 @@
 <div style="position: relative; width:60rem;
   height:90vh;">
-    <app-triangle  *ngIf="showTriangle1" style="position: absolute; top: 12rem; left: 9rem;" [dataFromParent]="style1" (click)="handleTriangleClick(1)"></app-triangle>
+    <app-triangle *ngIf="showTriangle1" style="position: absolute; top: 12rem; left: 9rem;" [dataFromParent]="style1" (click)="handleTriangleClick(1)"></app-triangle>
     <app-triangle *ngIf="showTriangle2" style="position: absolute; top: 4rem; right: 8rem;"[dataFromParent]="style2" (click)="handleTriangleClick(2)"></app-triangle>
     <app-triangle *ngIf="showTriangle3" style="position: absolute; top: 18rem; right: 23rem;"[dataFromParent]="style3" (click)="handleTriangleClick(3)"></app-triangle>
     <app-triangle *ngIf="showTriangle4" style="position: absolute;bottom: 10rem; right: 14rem;"[dataFromParent]="style4" (click)="handleTriangleClick(4)"></app-triangle>
     <app-triangle *ngIf="showTriangle5" style="position: absolute; bottom: 8rem; left:16rem;"[dataFromParent]="style5"(click)="handleTriangleClick(5)"></app-triangle>
+    <app-triangle *ngIf="showTriangle6" style="position: absolute; top: 23rem; left: 19rem;" [dataFromParent]="style6" (click)="handleTriangleClick(6)"></app-triangle>
+    <app-triangle *ngIf="showTriangle7" style="position: absolute; top: 2rem; right: 16rem;"[dataFromParent]="style7" (click)="handleTriangleClick(7)"></app-triangle>
+    <app-triangle *ngIf="showTriangle8" style="position: absolute; top: 24rem; right: 23rem;"[dataFromParent]="style8" (click)="handleTriangleClick(8)"></app-triangle>
+    <app-triangle *ngIf="showTriangle9" style="position: absolute;bottom: 9rem; right: 24rem;"[dataFromParent]="style9" (click)="handleTriangleClick(9)"></app-triangle>
+    <app-triangle *ngIf="showTriangle10" style="position: absolute; bottom: 18rem; left:6rem;"[dataFromParent]="style10"(click)="handleTriangleClick(10)"></app-triangle>
     <app-header></app-header> 
     
   <app-circle
