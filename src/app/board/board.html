@@ -9,7 +9,7 @@
     <app-triangle *ngIf="showTriangle7" style="position: absolute; top: 2rem; right: 16rem;"[dataFromParent]="style7" (click)="handleTriangleClick(7)"></app-triangle>
     <app-triangle *ngIf="showTriangle8" style="position: absolute; top: 24rem; right: 23rem;"[dataFromParent]="style8" (click)="handleTriangleClick(8)"></app-triangle>
     <app-triangle *ngIf="showTriangle9" style="position: absolute;bottom: 9rem; right: 24rem;"[dataFromParent]="style9" (click)="handleTriangleClick(9)"></app-triangle>
-    <app-triangle *ngIf="showTriangle10" style="position: absolute; bottom: 18rem; left:6rem;"[dataFromParent]="style10"(click)="handleTriangleClick(10)"></app-triangle>
+    <app-triangle *ngIf="showTriangle10" style="position: absolute; bottom: 10rem; left:6rem;"[dataFromParent]="style10"(click)="handleTriangleClick(10)"></app-triangle>
     <app-header></app-header> 
     
   <app-circle
@@ -21,7 +21,9 @@
   [style.border-radius]="circle.borderRadius" 
   [style.position]="circle.position"
   [style.top]="typeof circle.top === 'number' ? circle.top + 'rem' : circle.top"
+  [style.bottom]="typeof circle.bottom === 'number' ? circle.bottom + 'rem' : circle.bottom"
   [style.left]="typeof circle.left === 'number' ? circle.left + 'rem' : circle.left"
+  [style.right]="typeof circle.right === 'number' ? circle.right + 'rem' : circle.right"
   (click)="handleCircleClick(circle.id)">
 </app-circle>
 

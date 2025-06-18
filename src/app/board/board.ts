@@ -14,7 +14,7 @@ import { Circle } from '../circle/circle';
 })
 export class Board {
   counter: number = 0;
-style1 = { cursor: 'pointer', backgroundColor: 'red', width: '2rem', height: '2rem'}; 
+style1 = { cursor: 'pointer', backgroundColor: 'orange', width: '2rem', height: '2rem'}; 
 style2 = { cursor: 'pointer', backgroundColor: 'blue', width: '3rem', height: '3rem' }; 
 style3 = { cursor: 'pointer', backgroundColor: 'green', width: '1rem', height: '1rem' }; 
 style4 = { cursor: 'pointer', backgroundColor: 'yellow', width: '4rem', height: '4rem' }; 
@@ -22,14 +22,19 @@ style5 = { cursor: 'pointer', backgroundColor: 'black', width: '5rem', height: '
 style6 = { cursor: 'pointer', backgroundColor: 'pink', width: '7rem', height: '7rem'}; 
 style7 = { cursor: 'pointer', backgroundColor: 'grey', width: '3.5rem', height: '3.5rem' }; 
 style8 = { cursor: 'pointer', backgroundColor: 'violet', width: '1rem', height: '1rem' }; 
-style9 = { cursor: 'pointer', backgroundColor: 'orange', width: '8rem', height: '8rem' }; 
+style9 = { cursor: 'pointer', backgroundColor: 'red', width: '4rem', height: '4rem' }; 
 style10 = { cursor: 'pointer', backgroundColor: 'gold', width: '2rem', height: '2rem' }; 
 
-circles: {id:number; visible:boolean; color:string; size:number; borderRadius?: number | string; position?: string; top?: number | string; left?: number | string;}[] = [
-  { id: 1, visible: true, color: 'red', size: 100, borderRadius: '50%', position: 'absolute', top: '10rem', left: '12rem' },
-  { id: 2, visible: true, color: 'green', size: 70, borderRadius: '50%', position: 'absolute', top: '16rem', left: '7rem' },
-  { id: 3, visible: true, color: 'blue', size: 60, borderRadius: '50%', position: 'absolute', top: 14, left: '5rem' }
-    
+circles: {id:number; visible:boolean; color:string; size:number; borderRadius?: number | string; position?: string; top?: number | string; left?: number | string; right?: number | string; bottom?: number | string;}[] = [
+  { id: 1, visible: true, color: 'red', size: 100, borderRadius: '50%', position: 'absolute', top: '10rem', right: '31rem' },
+  { id: 2, visible: true, color: 'yellow', size: 70, borderRadius: '50%', position: 'absolute', top: '16rem', right: '7rem' },
+  { id: 3, visible: true, color: 'grey', size: 60, borderRadius: '50%', position: 'absolute', bottom: '14rem', right: '5rem' },
+  { id: 4, visible: true, color: 'black', size: 30, borderRadius: '50%', position: 'absolute', top: '10rem', right: '12rem' },
+  { id: 5, visible: true, color: 'violet', size: 50, borderRadius: '50%', position: 'absolute', top: '16rem', left: '7rem' },
+  { id: 6, visible: true, color: 'orange', size: 20, borderRadius: '50%', position: 'absolute', bottom: '18rem', right: '5rem' },
+  { id: 7, visible: true, color: 'blue', size: 90, borderRadius: '50%', position: 'absolute', top: '7rem', left: '12rem' },
+  { id: 8, visible: true, color: 'green', size: 80, borderRadius: '50%', position: 'absolute', bottom: '16rem', left: '7rem' },
+  { id: 9, visible: true, color: 'white', size: 40, borderRadius: '50%', position: 'absolute', bottom: '19rem', right: '20rem' }
   ];
 
   
