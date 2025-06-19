@@ -25,26 +25,37 @@ style8 = { cursor: 'pointer', backgroundColor: 'violet', width: '1rem', height: 
 style9 = { cursor: 'pointer', backgroundColor: 'red', width: '4rem', height: '4rem' }; 
 style10 = { cursor: 'pointer', backgroundColor: 'gold', width: '2rem', height: '2rem' }; 
 
-circles: {id:number; visible:boolean; color:string; size:number; borderRadius?: number | string; position?: string; top?: number | string; left?: number | string; right?: number | string; bottom?: number | string;}[] = [
-  { id: 1, visible: true, color: 'red', size: 100, borderRadius: '50%', position: 'absolute', top: '10rem', right: '31rem' },
-  { id: 2, visible: true, color: 'yellow', size: 70, borderRadius: '50%', position: 'absolute', top: '16rem', right: '7rem' },
-  { id: 3, visible: true, color: 'grey', size: 60, borderRadius: '50%', position: 'absolute', bottom: '14rem', right: '5rem' },
-  { id: 4, visible: true, color: 'black', size: 30, borderRadius: '50%', position: 'absolute', top: '10rem', right: '12rem' },
-  { id: 5, visible: true, color: 'violet', size: 50, borderRadius: '50%', position: 'absolute', top: '16rem', left: '7rem' },
-  { id: 6, visible: true, color: 'orange', size: 20, borderRadius: '50%', position: 'absolute', bottom: '18rem', right: '5rem' },
-  { id: 7, visible: true, color: 'blue', size: 90, borderRadius: '50%', position: 'absolute', top: '7rem', left: '12rem' },
-  { id: 8, visible: true, color: 'green', size: 80, borderRadius: '50%', position: 'absolute', bottom: '16rem', left: '7rem' },
-  { id: 9, visible: true, color: 'white', size: 40, borderRadius: '50%', position: 'absolute', bottom: '19rem', right: '20rem' }
+circles: {id:number; visible:boolean; color:string; size:number; borderRadius?: number | string; position?: string; top?: number | string; left?: number | string; right?: number | string; bottom?: number | string; cursor: string;}[] = [
+  { id: 1, cursor: 'pointer', visible: true, color: 'red', size: 100, borderRadius: '50%', position: 'absolute', top: '10rem', right: '31rem' },
+  { id: 2, cursor: 'pointer',visible: true, color: 'yellow', size: 70, borderRadius: '50%', position: 'absolute', top: '16rem', right: '7rem' },
+  { id: 3, cursor: 'pointer',visible: true, color: 'grey', size: 60, borderRadius: '50%', position: 'absolute', bottom: '14rem', right: '5rem' },
+  { id: 4, cursor: 'pointer',visible: true, color: 'black', size: 30, borderRadius: '50%', position: 'absolute', top: '10rem', right: '12rem' },
+  { id: 5, cursor: 'pointer',visible: true, color: 'violet', size: 50, borderRadius: '50%', position: 'absolute', top: '16rem', left: '7rem' },
+  { id: 6, cursor: 'pointer',visible: true, color: 'orange', size: 20, borderRadius: '50%', position: 'absolute', bottom: '18rem', right: '5rem' },
+  { id: 7, cursor: 'pointer',visible: true, color: 'blue', size: 90, borderRadius: '50%', position: 'absolute', top: '7rem', left: '12rem' },
+  { id: 8, cursor: 'pointer',visible: true, color: 'green', size: 80, borderRadius: '50%', position: 'absolute', bottom: '16rem', left: '7rem' },
+  { id: 9, cursor: 'pointer',visible: true, color: 'white', size: 40, borderRadius: '50%', position: 'absolute', bottom: '19rem', right: '20rem' }
   ];
 
-  
+  showErrorMessage: boolean = false;
+errorMessageTimeoutId: any;
   handleCircleClick(id: number): void {
-    const circle = this.circles.find(t => t.id === id);
+    const circle = this.circles.find(c => c.id === id);
     if (circle && circle.visible) {
       circle.visible = false;
-      
-    }
+      this.showError();
+         }
   }
+
+  showError(): void {
+  this.showErrorMessage = true;
+  if (this.errorMessageTimeoutId) {
+    clearTimeout(this.errorMessageTimeoutId);
+  }
+  this.errorMessageTimeoutId = setTimeout(() => {
+    this.showErrorMessage = false;
+  }, 1000);
+}
   showTriangle1: boolean = true;
   showTriangle2: boolean = true;
   showTriangle3: boolean = true;
