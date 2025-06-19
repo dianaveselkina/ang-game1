@@ -12,7 +12,7 @@ export class Circle {
   @Input() visible: boolean = true;
   @Input() styles: { [key: string]: string } = {};
   
-    @Input() showErrorMessage: boolean = false;
+    @Input() showMessage: boolean = false;
 
   @Output() click = new EventEmitter<void>();
 

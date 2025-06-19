@@ -37,24 +37,24 @@ circles: {id:number; visible:boolean; color:string; size:number; borderRadius?: 
   { id: 9, cursor: 'pointer',visible: true, color: 'white', size: 40, borderRadius: '50%', position: 'absolute', bottom: '19rem', right: '20rem' }
   ];
 
-  showErrorMessage: boolean = false;
-errorMessageTimeoutId: any;
+  showMessage: boolean = false;
+MessageTimeoutId: any;
   handleCircleClick(id: number): void {
     const circle = this.circles.find(c => c.id === id);
     if (circle && circle.visible) {
       circle.visible = false;
-      this.showError();
+      this.show();
          }
   }
 
-  showError(): void {
-  this.showErrorMessage = true;
-  if (this.errorMessageTimeoutId) {
-    clearTimeout(this.errorMessageTimeoutId);
+  show(): void {
+  this.showMessage = true;
+  if (this.MessageTimeoutId) {
+    clearTimeout(this.MessageTimeoutId);
   }
-  this.errorMessageTimeoutId = setTimeout(() => {
-    this.showErrorMessage = false;
-  }, 1000);
+  this.MessageTimeoutId = setTimeout(() => {
+    this.showMessage = false;
+  }, 2000);
 }
   showTriangle1: boolean = true;
   showTriangle2: boolean = true;
