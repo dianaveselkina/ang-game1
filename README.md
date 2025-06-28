@@ -5,15 +5,15 @@
 
 ## Требования
 
-- Node.js >= 14.x  
-- npm >= 6.x  
-- Angular CLI >= 14.x
+- Node.js >= 20.19.2  
+- npm >= 10.8.2  
+- Angular CLI >= 20.0.1
 
 ## Установка
 
 1. Склонируйте репозиторий:
 ```bash
-git clone https://github.com/ваш_репозиторий.git
+git clone https://github.com/dianaveselkina/ang-game1
 ```
 2.Перейдите в папку проекта:
 ```bash
