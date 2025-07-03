@@ -1,9 +1,10 @@
 .message {
+  z-index: 5;
   position: fixed;
   top: 10rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(182, 185, 177, 0.384);
+  background-color: rgba(182, 185, 177, 0.2);
   color: white;
   padding: 4rem;
   border-radius: 1rem;

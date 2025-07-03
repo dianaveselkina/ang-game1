@@ -82,4 +82,9 @@
   >
   </app-circle>
   <app-counter [count]="counter"></app-counter>
+  <div class="endGame" *ngIf="counter >= 10">
+    <p class="endGame__text">
+      Молодец 😊<br />Ты отлично справился<br />с заданием!!!
+    </p>
+  </div>
 </div>
