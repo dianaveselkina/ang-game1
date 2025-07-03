@@ -1,7 +1,11 @@
-<div style="position: relative; width: 60rem; height: 90vh">
+<div class="center-container" *ngIf="!gameStarted">
+  <app-header></app-header>
+  <app-button (click)="startGame()">Начать игру</app-button>
+</div>
+<div *ngIf="gameStarted" style="position: relative; width: 60rem; height: 90vh">
   <app-triangle
     *ngIf="showTriangle1"
-    style="position: absolute; top: 12rem; left: 9rem"
+    style="position: absolute; top: 17rem; left: 13rem"
     [dataFromParent]="style1"
     (click)="handleTriangleClick(1)"
   ></app-triangle>
@@ -43,7 +47,7 @@
   ></app-triangle>
   <app-triangle
     *ngIf="showTriangle8"
-    style="position: absolute; top: 24rem; right: 23rem"
+    style="position: absolute; top: 24rem; right: 14rem"
     [dataFromParent]="style8"
     (click)="handleTriangleClick(8)"
   ></app-triangle>
@@ -59,7 +63,6 @@
     [dataFromParent]="style10"
     (click)="handleTriangleClick(10)"
   ></app-triangle>
-  <app-header></app-header>
 
   <app-circle
     *ngFor="let circle of circles"
@@ -78,7 +81,5 @@
     (click)="handleCircleClick(circle.id)"
   >
   </app-circle>
-
   <app-counter [count]="counter"></app-counter>
-  <app-button></app-button>
 </div>

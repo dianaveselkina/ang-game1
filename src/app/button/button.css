@@ -1,1 +1,7 @@
-
+button {
+  padding: 2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: rgb(51, 241, 178);
+  font-size: 2rem;
+}

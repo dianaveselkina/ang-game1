@@ -13,6 +13,11 @@ import { Circle } from '../circle/circle';
   styleUrl: './board.css',
 })
 export class Board {
+  gameStarted: boolean = false;
+
+  startGame(): void {
+    this.gameStarted = true;
+  }
   counter: number = 0;
   style1 = {
     cursor: 'pointer',
@@ -60,7 +65,7 @@ export class Board {
     cursor: 'pointer',
     display: 'inline-block',
     border: '1rem solid transparent',
-    borderBottom: '1rem solid violet',
+    borderTop: '1rem solid violet',
   };
   style9 = {
     cursor: 'pointer',
@@ -191,10 +196,10 @@ export class Board {
 
   showMessage: boolean = false;
   MessageTimeoutId: any;
+
   handleCircleClick(id: number): void {
     const circle = this.circles.find((c) => c.id === id);
-    if (circle && circle.visible) {
-      circle.visible = false;
+    if (circle) {
       this.show();
     }
   }
@@ -206,7 +211,7 @@ export class Board {
     }
     this.MessageTimeoutId = setTimeout(() => {
       this.showMessage = false;
-    }, 2000);
+    }, 1500);
   }
   showTriangle1: boolean = true;
   showTriangle2: boolean = true;

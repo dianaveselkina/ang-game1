@@ -1,11 +1,15 @@
-.counter{
-    height: 3rem;
-    width: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   border-radius: 0.5rem;
-     border: 2px solid rgb(6, 92, 27);
-     font-size: 2rem;
-     color: black;
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 6rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 2px solid rgb(6, 92, 27);
+  font-size: 3rem;
+  color: black;
 }
